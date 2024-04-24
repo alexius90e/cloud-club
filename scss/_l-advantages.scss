@@ -1,3 +1,67 @@
 .advantages {
-  
+  margin: 100px 0;
+
+  @include laptop {
+    margin: 64px 0;
+  }
+
+  &__title {
+    margin: 0 0 60px;
+    font-weight: 700;
+    font-size: 49px;
+    color: #151c2f;
+
+    @include tablet {
+      font-size: 33px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    @include laptop {
+      gap: 32px 24px;
+    }
+  }
+
+  &__card {
+    flex: 0 0 calc(50% - 20px);
+
+    @include tablet {
+      flex: 1 1 100%;
+    }
+
+    &-title {
+      margin: 0 0 16px;
+      font-weight: 500;
+      font-size: 32px;
+      color: #151c2f;
+
+      @include laptop {
+        font-size: 26px;
+      }
+
+      @include mobile {
+        font-size: 21px;
+      }
+    }
+
+    &-text {
+      margin: 0;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 150%;
+      color: #151c2f;
+
+      @include laptop {
+        font-size: 20px;
+      }
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
 }
