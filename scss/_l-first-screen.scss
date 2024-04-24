@@ -1,0 +1,99 @@
+.first-screen {
+  padding: 200px 0 80px;
+  background: url(../assets/gray_gold_charcoal.jpg) center no-repeat;
+  background-size: cover;
+
+  @include laptop {
+    padding: 90px 0 24px;
+    background-position: center right;
+  }
+
+  @include mobile {
+    background-position: center right -200px;
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font-weight: 800;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.25);
+    color: #fff;
+
+    @include laptop {
+      margin: 0 0 16px;
+      font-weight: 800;
+      font-size: 38px;
+    }
+
+    @include mobile {
+      margin: 0 0 16px;
+    }
+  }
+
+  &__description {
+    max-width: 720px;
+    margin: 0 0 40px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 150%;
+    color: #fff;
+    text-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.4);
+
+    @include laptop {
+      min-height: 300px;
+      margin: 0 0 16px;
+    }
+
+    @include mobile {
+      min-height: 256px;
+      font-size: 16px;
+    }
+  }
+
+  &__presentation {
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 16px 32px;
+      box-sizing: border-box;
+      font-weight: 500;
+      font-size: 20px;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      background-color: #89c000;
+      transition: all ease-in-out 0.14s;
+      will-change: transform;
+      cursor: pointer;
+
+      @include mobile {
+        font-size: 16px;
+      }
+
+      @include mobilesm {
+        width: 100%;
+        padding: 16px 24px;
+      }
+
+      &::after {
+        content: '';
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        background: url(../assets/arrow.svg) center no-repeat;
+        background-size: cover;
+      }
+
+      &:hover {
+        background-color: #7daf00;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}

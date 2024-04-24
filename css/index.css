@@ -1,0 +1,140 @@
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  color: #181d42;
+  background-color: #ffffff;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.first-screen {
+  padding: 200px 0 80px;
+  background: url(../assets/gray_gold_charcoal.jpg) center no-repeat;
+  background-size: cover;
+}
+@media (max-width: 992px) {
+  .first-screen {
+    padding: 90px 0 24px;
+    background-position: center right;
+  }
+}
+@media (max-width: 576px) {
+  .first-screen {
+    background-position: center right -200px;
+  }
+}
+.first-screen__title {
+  margin: 0 0 8px;
+  font-weight: 800;
+  font-size: 80px;
+  text-transform: uppercase;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .first-screen__title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 38px;
+  }
+}
+@media (max-width: 576px) {
+  .first-screen__title {
+    margin: 0 0 16px;
+  }
+}
+.first-screen__description {
+  max-width: 720px;
+  margin: 0 0 40px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 150%;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 992px) {
+  .first-screen__description {
+    min-height: 300px;
+    margin: 0 0 16px;
+  }
+}
+@media (max-width: 576px) {
+  .first-screen__description {
+    min-height: 256px;
+    font-size: 16px;
+  }
+}
+.first-screen__presentation-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px 32px;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  background-color: #89c000;
+  transition: all ease-in-out 0.14s;
+  will-change: transform;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .first-screen__presentation-button {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .first-screen__presentation-button {
+    width: 100%;
+    padding: 16px 24px;
+  }
+}
+.first-screen__presentation-button::after {
+  content: "";
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background: url(../assets/arrow.svg) center no-repeat;
+  background-size: cover;
+}
+.first-screen__presentation-button:hover {
+  background-color: #7daf00;
+}
+.first-screen__presentation-button:active {
+  transform: scale(0.98);
+}
