@@ -355,7 +355,13 @@ img {
 }
 
 .first-screen {
+  display: flex;
+  align-items: center;
+  max-height: 1200px;
+  min-height: 100vh;
+  height: 100%;
   padding: 200px 0 80px;
+  box-sizing: border-box;
   background: url(../assets/gray_gold_charcoal.jpg) center no-repeat;
   background-size: cover;
 }
