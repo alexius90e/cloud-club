@@ -1,2 +1,221 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  padding: 24px 0;
+
+  @include laptop {
+    padding: 16px 0;
+  }
+
+  &.active::before {
+    @include laptop {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba($color: $black, $alpha: 0.5);
+      z-index: 200;
+      backdrop-filter: blur(5px);
+    }
+  }
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-image {
+      max-width: 100px;
+
+      @include laptop {
+        max-width: 72px;
+      }
+    }
+  }
+
+  &.active &__nav {
+    @include laptop {
+      transform: translateX(0);
+    }
+  }
+
+  &__nav {
+    @include laptop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 500;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 360px;
+      width: 100%;
+      padding: 24px 20px;
+      box-sizing: border-box;
+      background-color: $white;
+      box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
+      transform: translateX(-800px);
+      transition: transform ease-in-out 0.3s;
+      will-change: transform;
+      cursor: pointer;
+    }
+
+    @include tablet {
+      padding: 16px 20px;
+    }
+
+    &-top {
+      display: none;
+
+      @include laptop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0 48px;
+      }
+    }
+
+    &-close {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      border: none;
+      background: url(../assets/close.svg) center no-repeat;
+      transition: transform ease-in-out 0.12s;
+      will-change: transform;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.04);
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+    }
+
+    &-menu {
+      display: flex;
+      gap: 64px;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      @include desktop {
+        gap: 32px;
+      }
+
+      @include laptop {
+        flex: 1 1 auto;
+        flex-direction: column;
+
+        padding-right: 8px;
+        overflow: auto;
+      }
+
+      &-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &-link {
+          font-weight: 500;
+          font-size: 20px;
+          color: #fff;
+          text-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+          transition: color ease-in-out 0.2s;
+          will-change: color;
+          cursor: pointer;
+
+          @include laptop {
+            font-weight: 500;
+            font-size: 26px;
+            color: #151c2f;
+            text-shadow: none;
+          }
+        }
+
+        &_partnership {
+          @include laptop {
+            flex: 1 1 auto;
+            display: flex;
+            align-items: flex-end;
+          }
+        }
+
+        &_partnership &-link {
+          display: inline-block;
+          border: 2px solid #fff;
+          border-radius: 8px;
+          padding: 16px 32px;
+          transition: all ease-in-out 0.14s;
+          will-change: transform;
+          cursor: pointer;
+
+          @include laptop {
+            flex: 1 1 auto;
+            display: flex;
+            align-items: flex-end;
+            max-width: fit-content;
+            font-size: 20px;
+            color: #ffffff;
+            background-color: #89c000;
+          }
+
+          &:hover {
+            background-color: #89c000;
+          }
+
+          &:active {
+            transform: scale(0.98);
+          }
+        }
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include laptop {
+      display: inline-block;
+    }
+
+    &-button {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      border: none;
+      background: url(../assets/burger.svg) center no-repeat;
+      transition: transform ease-in-out 0.12s;
+      will-change: transform;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.04);
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+    }
+  }
 }

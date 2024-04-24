@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Cloud Club</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/index.css" />
     <script type="module" src="./js/index.js" defer></script>
@@ -11,7 +11,44 @@
 
   <body>
     <header class="header">
-      <div class="container"></div>
+      <div class="container">
+        <div class="header__logo">
+          <a class="header__logo-link" href="./">
+            <img class="header__logo-image" src="./assets/logo.png" alt="logo" />
+          </a>
+        </div>
+
+        <nav class="header__nav">
+          <div class="header__nav-top">
+            <div class="header__logo">
+              <a class="header__logo-link" href="./">
+                <img class="header__logo-image" src="./assets/logo.png" alt="logo" />
+              </a>
+            </div>
+
+            <button class="header__nav-close"></button>
+          </div>
+
+          <ul class="header__nav-menu">
+            <li class="header__nav-menu-item">
+              <a class="header__nav-menu-item-link" href="#">Капсулы для кальяна</a>
+            </li>
+            <li class="header__nav-menu-item">
+              <a class="header__nav-menu-item-link" href="#">Палитра вкусов</a>
+            </li>
+            <li class="header__nav-menu-item">
+              <a class="header__nav-menu-item-link" href="#">Контакты</a>
+            </li>
+            <li class="header__nav-menu-item header__nav-menu-item_partnership">
+              <a class="header__nav-menu-item-link" href="#"> Сотрудничество </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__burger">
+          <button class="header__burger-button"></button>
+        </div>
+      </div>
     </header>
 
     <main class="main">
@@ -88,11 +125,17 @@
 
             <div class="reviews__card">
               <p class="reviews__card-text">
-                Количество повторных визитов удвоилось с тех пор, как мы трансформировали наше пространство в лаунж по методике Облачного клуба. Новизна продукта привлекает новых клиентов, а стабильное качество заставляет их возвращаться снова и снова.
+                Количество повторных визитов удвоилось с тех пор, как мы трансформировали наше
+                пространство в лаунж по методике Облачного клуба. Новизна продукта привлекает новых
+                клиентов, а стабильное качество заставляет их возвращаться снова и снова.
               </p>
 
               <figure class="reviews__card-figure">
-                <img class="reviews__card-figure-image" src="./assets/logo-twin-tigers.png" alt="twin-tigers" />
+                <img
+                  class="reviews__card-figure-image"
+                  src="./assets/logo-twin-tigers.png"
+                  alt="twin-tigers"
+                />
               </figure>
 
               <h3 class="reviews__card-title">Twin Tigers</h3>
@@ -100,11 +143,18 @@
 
             <div class="reviews__card">
               <p class="reviews__card-text">
-                Мы существенно снизили расходы и повысили рентабельность нашего бара. Новинка Облачного клуба не только значительно повысила узнаваемость, но и помогла нам оптимизировать работу, позволив детально отслеживать запасы и упростить контроль продаж.
+                Мы существенно снизили расходы и повысили рентабельность нашего бара. Новинка
+                Облачного клуба не только значительно повысила узнаваемость, но и помогла нам
+                оптимизировать работу, позволив детально отслеживать запасы и упростить контроль
+                продаж.
               </p>
 
               <figure class="reviews__card-figure">
-                <img class="reviews__card-figure-image" src="./assets/logo-kotelnaya.png" alt="kotelnaya" />
+                <img
+                  class="reviews__card-figure-image"
+                  src="./assets/logo-kotelnaya.png"
+                  alt="kotelnaya"
+                />
               </figure>
 
               <h3 class="reviews__card-title">Котельная</h3>
