@@ -1,3 +1,123 @@
 .reviews {
-  
+  margin: 100px 0;
+
+  @include laptop {
+    margin: 64px 0;
+  }
+
+  &__title {
+    margin: 0 0 60px;
+    font-weight: 700;
+    font-size: 49px;
+    color: #151c2f;
+
+    @include tablet {
+      margin: 0 0 40px;
+      font-size: 33px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 24px;
+
+    @include laptop {
+      gap: 32px 24px;
+    }
+  }
+
+  &__card {
+    position: relative;
+    flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+    gap: 24px 16px;
+    box-sizing: border-box;
+    padding: 24px 16px 16px;
+    border-radius: 16px;
+    border: 1px solid #bdbdbd;
+    background-color: $white;
+
+    @include laptop {
+      flex: 0 0 calc(100% / 2 - 24px / 2);
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+      gap: 12px 16px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 16px;
+      display: inline-block;
+      width: 38px;
+      height: 32px;
+      background: url(../assets/quotes.svg) center no-repeat;
+      transform: translateY(-50%);
+    }
+
+    &-text {
+      margin: 0;
+      flex: 1 1 100%;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 150%;
+      color: #151c2f;
+
+      @include laptop {
+        font-size: 20px;
+      }
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    &-figure {
+      margin: 0;
+      width: fit-content;
+      overflow: hidden;
+      border-radius: 150px;
+
+      &-image {
+        display: block;
+        width: 120px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border: 3px solid #151c2f;
+        border-radius: 150px;
+
+        @include desktop {
+          width: 80px;
+          border-width: 2px;
+        }
+
+        @include mobile {
+          width: 48px;
+          border-width: 1px;
+        }
+      }
+    }
+
+    &-title {
+      margin: 0;
+      font-weight: 500;
+      font-size: 28px;
+      color: #151c2f;
+
+      @include laptop {
+        font-size: 24px;
+      }
+
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+  }
 }

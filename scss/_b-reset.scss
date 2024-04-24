@@ -14,6 +14,11 @@ body {
   overflow-y: scroll;
   color: $black;
   background-color: $white;
+  background: url(../assets/smoke.jpg) center top 600px no-repeat;
+
+  @include laptop {
+    background-position: top 400px center;
+  }
 }
 
 a,
