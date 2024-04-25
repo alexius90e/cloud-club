@@ -13,7 +13,7 @@ body {
   overflow-y: scroll;
   color: #181d42;
   background-color: #ffffff;
-  background: url(../assets/smoke.jpg) center top 600px no-repeat;
+  background: url(../assets/smoke-min.webp) center top 600px no-repeat;
 }
 @media (max-width: 992px) {
   body {
@@ -362,7 +362,7 @@ img {
   height: 100%;
   padding: 200px 0 80px;
   box-sizing: border-box;
-  background: url(../assets/gray_gold_charcoal.jpg) center no-repeat;
+  background: url(../assets/gray_gold_charcoal-min.webp) center no-repeat;
   background-size: cover;
 }
 @media (max-width: 992px) {
