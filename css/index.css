@@ -785,12 +785,13 @@ img {
 }
 @media (max-width: 992px) {
   .modal#successModal .modal__body {
-    padding: 216px 24px 60px;
+    padding: 240px 24px 60px;
     background-size: 992px;
   }
 }
 @media (max-width: 768px) {
   .modal#successModal .modal__body {
+    padding: 130px 24px 60px;
     background-size: 768px;
   }
 }

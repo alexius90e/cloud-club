@@ -52,11 +52,12 @@
     background-color: $white;
 
     @include laptop {
-      padding: 216px 24px 60px;
+      padding:240px 24px 60px;
       background-size: 992px;
     }
 
     @include tablet {
+      padding:130px 24px 60px;
       background-size: 768px;
     }
 
