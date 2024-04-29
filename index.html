@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cloud Club</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/index.css" />
     <script type="module" src="./js/index.js" defer></script>
   </head>
@@ -55,7 +59,6 @@
             Инновации Облачного клуба: 1 500 000 дополнительной выручки и 700 новых посетителей за 3
             недели благодаря превращению обычного ресторана в уютный лаунж!
           </h1>
-          <!-- <h1 class="first-screen__title">Заполните веранду клиентами за 10 дней</h1> -->
           <p class="first-screen__description">
             Инновации Облачного клуба: 1 500 000 дополнительной выручки и 700 новых посетителей за 3
             недели благодаря превращению обычного ресторана в уютный лаунж!
@@ -204,5 +207,70 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal" id="contactModal">
+      <div class="modal__body">
+        <button class="modal__close"></button>
+
+        <div class="modal__content">
+          <h2 class="modal__title">Присоединиться к команде!</h2>
+          <p class="modal__text">
+            Мы открываем двери избранным, кто готов стать соавторами этой истории успеха.
+            Уникальные, одноразовые капсулы для кальяна Nur – это ваш персональный билет в мир
+            финансового благополучия.
+          </p>
+
+          <form class="modal__form">
+            <fieldset class="modal__form-fieldset">
+              <input
+                class="modal__form-input"
+                type="text"
+                name="name"
+                placeholder="Фамилия Имя Отчество"
+              />
+            </fieldset>
+
+            <fieldset class="modal__form-fieldset">
+              <input class="modal__form-input" type="email" name="email" placeholder="E-mail" />
+            </fieldset>
+
+            <fieldset class="modal__form-fieldset">
+              <input
+                class="modal__form-input"
+                type="tel"
+                name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="Телефон"
+              />
+            </fieldset>
+
+            <fieldset class="modal__form-fieldset">
+              <button class="modal__form-submit">Отправить</button>
+            </fieldset>
+
+            <fieldset class="modal__form-fieldset modal__form-fieldset_disclaimer">
+              Соглашаюсь с условиями конфиденциальности
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="successModal">
+      <div class="modal__body">
+        <button class="modal__close"></button>
+
+        <div class="modal__content">
+          <h2 class="modal__title">Спасибо за ваше время и интерес к нашей компании!</h2>
+          <p class="modal__description">
+            Мы высоко ценим, что вы оставили заявку на присоединение к команде Nur
+          </p>
+          <p class="modal__text">
+            В ближайшее время наш менеджер свяжется с вами, чтобы ответить на ваши вопросы и
+            обсудить возможные варианты сотрудничества
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

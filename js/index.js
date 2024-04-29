@@ -28,3 +28,31 @@ if (burgerButton && header && headerNav) {
     }
   });
 }
+
+const presentationButton = document.querySelector('.first-screen__presentation-button');
+const modals = document.querySelectorAll('.modal');
+const contactModal = document.querySelector('#contactModal');
+const successModal = document.querySelector('#successModal');
+const contactForm = document.querySelector('#contactModal .modal__form');
+
+modals.forEach((modal) => {
+  modal.addEventListener('click', (event) => {
+    const isCloseButton = event.target.classList.contains('modal__close');
+    const isOverlay = event.target === event.currentTarget;
+    if (isCloseButton || isOverlay) modal.classList.remove('active');
+  });
+});
+
+if (presentationButton) {
+  presentationButton.addEventListener('click', () => {
+    if (contactModal) contactModal.classList.add('active');
+  });
+}
+
+if (contactForm) {
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (contactModal) contactModal.classList.remove('active');
+    if (successModal) successModal.classList.add('active');
+  });
+}

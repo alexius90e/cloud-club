@@ -1,0 +1,265 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: none;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  backdrop-filter: blur(10px);
+
+  &.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 96vh;
+    max-width: 96vw;
+    width: 1160px;
+    padding: 60px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    background-color: $white;
+    animation: fadeInDown;
+    animation-duration: 0.4s;
+
+    @include desktop {
+      margin: 0 0 16px;
+      font-size: 36px;
+      border-radius: 20px;
+    }
+
+    @include laptop {
+      padding: 60px 24px;
+    }
+
+    @include mobile {
+      font-size: 26px;
+    }
+  }
+
+  &#successModal &__body {
+    padding: 276px 60px 60px;
+    background: url(../assets/modal-success-bg.webp) top -40px center no-repeat;
+    background-size: 1200px;
+    background-color: $white;
+
+    @include laptop {
+      padding: 216px 24px 60px;
+      background-size: 992px;
+    }
+
+    @include tablet {
+      background-size: 768px;
+    }
+
+    @include mobile {
+      background-size: 576px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    padding: 0;
+    border: none;
+    background: url(../assets/close.svg) center no-repeat;
+    background-size: 48px;
+    opacity: 0.5;
+    cursor: pointer;
+
+    @include laptop {
+      top: 20px;
+      right: 20px;
+      height: 40px;
+      width: 40px;
+      background-size: 34px;
+    }
+
+    @include mobile {
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+  &__content {
+    max-height: calc(96vh - 120px);
+    width: 100%;
+    max-width: 860px;
+    padding-right: 4px;
+    box-sizing: border-box;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba($color: #000000, $alpha: 0.05);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+
+  &__title {
+    margin: 0 0 24px;
+    font-weight: 700;
+    font-size: 49px;
+
+    @include desktop {
+      margin: 0 0 16px;
+      font-size: 36px;
+    }
+
+    @include laptop {
+      font-size: 30px;
+    }
+
+    @include mobile {
+      font-size: 26px;
+    }
+  }
+
+  &__description {
+    margin: 0 0 24px;
+    font-weight: 400;
+    font-size: 33px;
+    line-height: 150%;
+
+    @include desktop {
+      margin: 0 0 16px;
+      font-size: 36px;
+    }
+
+    @include laptop {
+      font-size: 30px;
+    }
+
+    @include mobile {
+      font-size: 26px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 24px;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 150%;
+
+    @include desktop {
+      margin: 0 0 16px;
+      font-size: 24px;
+    }
+
+    @include laptop {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include mobile {
+      gap: 12px;
+    }
+
+    &-fieldset {
+      padding: 0;
+      margin: 0;
+      border: none;
+
+      &_disclaimer {
+        font-size: 14px;
+        text-align: center;
+        color: rgba($color: #000000, $alpha: 0.5);
+
+        @include mobile {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-input {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      box-sizing: border-box;
+      font-weight: 500;
+      font-size: 20px;
+      color: #151c2f;
+      border: none;
+      border-radius: 8px;
+      background-color: #f1f2f3;
+      outline: none;
+
+      @include mobile {
+        padding: 12px;
+        font-size: 14px;
+      }
+
+      &::placeholder {
+        color: rgba($color: #151c2f, $alpha: 0.2);
+      }
+    }
+
+    &-submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 16px 32px;
+      box-sizing: border-box;
+      font-weight: 500;
+      font-size: 20px;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      background-color: #89c000;
+      transition: all ease-in-out 0.14s;
+      will-change: transform;
+      cursor: pointer;
+
+      @include mobile {
+        padding: 12px;
+        font-size: 14px;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        background: url(../assets/submit.svg) center no-repeat;
+        background-size: cover;
+      }
+
+      &:hover {
+        background-color: #7daf00;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
