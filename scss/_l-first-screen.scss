@@ -108,7 +108,10 @@
       cursor: pointer;
 
       @include mobile {
-        font-size: 16px;
+        justify-content: center;
+        padding: 16px;
+        width: 100%;
+        font-size: 19px;
       }
 
       @include mobilesm {
