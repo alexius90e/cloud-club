@@ -359,7 +359,7 @@ img {
   display: flex;
   align-items: center;
   max-height: 1200px;
-  min-height: 100dvh;
+  min-height: 100svh;
   padding: 200px 0 80px;
   box-sizing: border-box;
 }
