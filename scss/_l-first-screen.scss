@@ -84,6 +84,10 @@
 
     &_original {
       max-width: 720px;
+
+      @include mobile {
+        font-size: 22px;
+      }
     }
   }
 
