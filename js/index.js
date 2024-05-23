@@ -30,6 +30,8 @@ if (burgerButton && header && headerNav) {
 }
 
 const presentationButton = document.querySelector('.first-screen__presentation-button');
+const offerButton = document.querySelector('.be-forward__offer-button');
+const contactButtons = [presentationButton, offerButton];
 const modals = document.querySelectorAll('.modal');
 const contactModal = document.querySelector('#contactModal');
 const successModal = document.querySelector('#successModal');
@@ -43,11 +45,11 @@ modals.forEach((modal) => {
   });
 });
 
-if (presentationButton) {
-  presentationButton.addEventListener('click', () => {
+contactButtons.forEach((contactButton) => {
+  contactButton.addEventListener('click', () => {
     if (contactModal) contactModal.classList.add('active');
   });
-}
+});
 
 if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
@@ -56,11 +58,3 @@ if (contactForm) {
     if (successModal) successModal.classList.add('active');
   });
 }
-
-// let vh = window.innerHeight * 0.01;
-// document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-// window.addEventListener('resize', () => {
-//   let vh = window.innerHeight * 0.01;
-//   document.documentElement.style.setProperty('--vh', `${vh}px`);
-// });
